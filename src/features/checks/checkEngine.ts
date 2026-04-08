@@ -1,4 +1,4 @@
-import type { AssessmentQuestion, CheckConfig, SavedCheckState } from './checkTypes'
+import type { AssessmentQuestion, CheckConfig, SavedCheckState } from './types'
 
 export function getActiveSegmentKey(config: CheckConfig, profileAnswers: Record<string, string>) {
   if (config.key === 'ai') {

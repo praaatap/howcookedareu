@@ -1,4 +1,4 @@
-import type { CheckConfig, ScoreOption } from './checkTypes'
+import type { CheckConfig, ScoreOption } from './types'
 
 const frequencyOptions: ScoreOption[] = [
   { label: 'Never', value: 0 },

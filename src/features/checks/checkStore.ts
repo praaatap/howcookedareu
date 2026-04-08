@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'
-import type { CheckKey, SavedCheckState } from './checkTypes'
+import type { CheckKey, SavedCheckState } from './types'
 
 type CheckStoreState = {
   checks: Record<CheckKey, SavedCheckState>

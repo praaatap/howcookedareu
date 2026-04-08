@@ -1,15 +1,16 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { checkConfigs } from '../features/checks/checkData'
+import ScreeningCompletionCard from '../features/checks/components/ScreeningCompletionCard'
 import {
+  checkConfigs,
   getAssessmentQuestions,
   getNextQuestionId,
   getSegmentLabel,
   getSegmentSummary,
-} from '../features/checks/checkEngine'
-import type { AssessmentQuestion, CheckKey } from '../features/checks/checkTypes'
-import { useCheckStore } from '../features/checks/checkStore'
+  useCheckStore,
+} from '../features/checks'
+import type { AssessmentQuestion, CheckKey } from '../features/checks'
 
 type ResultTone = {
   title: string
@@ -331,6 +332,15 @@ function CheckPage() {
                     </motion.article>
                   )
                 })}
+
+                <ScreeningCompletionCard
+                  screeningComplete={screeningComplete}
+                  segmentLabel={segmentLabel}
+                  segmentSummary={segmentSummary}
+                  answered={screeningAnswered}
+                  total={profileQuestions.length}
+                  onContinue={continueToAssessment}
+                />
               </div>
             </div>
 
