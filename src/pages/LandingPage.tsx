@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-const points = ['2-minute assessment', 'AI + Lifestyle tracks', 'Action-based result']
+const points = ['2-minute screening', 'AI + lifestyle tracks', 'Tailored question sets']
 
 function MindLogo() {
   return (
@@ -78,7 +78,7 @@ function AiPulseWidget() {
 
 export default function LandingPage() {
   return (
-    <main className="relative h-screen overflow-hidden bg-[#f6efe7] px-4 py-6 sm:px-8 sm:py-8">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#f6efe7] px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
       <div className="pointer-events-none absolute -left-20 -top-16 h-72 w-72 rounded-full bg-[#fcd9b7]/55 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-[#d8ecef]/65 blur-3xl" />
 
@@ -86,11 +86,11 @@ export default function LandingPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.45 }}
-        className="relative mx-auto flex h-full w-full max-w-5xl flex-col items-center justify-center text-center"
+        className="relative mx-auto flex min-h-[calc(100vh-3rem)] w-full max-w-5xl flex-col items-center justify-center text-center"
       >
         <div className="inline-flex items-center gap-2 rounded-full border border-[#eadbca] bg-white/80 px-4 py-2">
           <MindLogo />
-          <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">You Cooked Logo</p>
+          <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">How Cooked Are You</p>
         </div>
 
         <div className="mt-7">
@@ -98,14 +98,12 @@ export default function LandingPage() {
         </div>
 
         <h1 className="mt-5 max-w-4xl font-display text-4xl leading-[1.02] text-slate-900 sm:text-5xl lg:text-6xl">
-          AI is making us dumber.
-          <br />
-          Are you already cooked?
+          Are you over-relying on AI or running your life on low battery?
         </h1>
 
         <p className="mt-6 max-w-3xl font-ui text-sm leading-relaxed text-slate-700 sm:text-lg">
-          MIT research shows AI tools are weakening our problem-solving skills. Take the 2-minute assessment to see
-          how deep you&apos;re in the digital fryer. Lifestyle habits can make it worse, so we included that check too.
+          Start with a quick screening about who you are, then take a tailored check for AI habits or lifestyle drift.
+          The result is more specific, more useful, and easier to act on.
         </p>
 
         <div className="mt-9 flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:justify-center">
@@ -113,13 +111,13 @@ export default function LandingPage() {
             to="/check/ai"
             className="rounded-full bg-slate-900 px-7 py-3 text-center font-ui text-sm font-semibold text-white transition hover:bg-slate-700"
           >
-            Start Assessment
+            Start AI Check
           </Link>
           <Link
             to="/check/lifestyle"
             className="rounded-full border border-slate-300 bg-white/85 px-7 py-3 text-center font-ui text-sm font-semibold text-slate-700 transition hover:border-slate-500"
           >
-            Lifestyle Check
+            Start Lifestyle Check
           </Link>
         </div>
 
