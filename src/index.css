@@ -98,6 +98,30 @@ select:focus-visible {
   backdrop-filter: blur(8px);
 }
 
+.check-scroll-area {
+  scrollbar-gutter: stable;
+  scrollbar-width: auto;
+  scrollbar-color: rgba(15, 23, 42, 0.9) rgba(203, 213, 225, 0.7);
+}
+
+.check-scroll-area::-webkit-scrollbar {
+  width: 14px;
+}
+
+.check-scroll-area::-webkit-scrollbar-track {
+  background: rgba(203, 213, 225, 0.7);
+}
+
+.check-scroll-area::-webkit-scrollbar-thumb {
+  border: 3px solid rgba(203, 213, 225, 0.7);
+  border-radius: 9999px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(16, 185, 129, 0.85));
+}
+
+.check-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 1), rgba(16, 185, 129, 0.9));
+}
+
 .ambient-orb {
   pointer-events: none;
   position: absolute;

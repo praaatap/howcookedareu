@@ -12,7 +12,7 @@ export const checkConfigs: Record<'ai' | 'lifestyle', CheckConfig> = {
     key: 'ai',
     title: 'AI Cooked Check',
     subtitle: 'Screen your habits first, then take a sharper assessment tuned to how you actually use AI.',
-    accentClass: 'from-emerald-100 via-cyan-50 to-transparent',
+    accentClass: 'from-emerald-100 via-cyan-50 to-[#f3ede4]',
     introLabel: 'AI habit screening',
     profileQuestions: [
       {
@@ -135,7 +135,7 @@ export const checkConfigs: Record<'ai' | 'lifestyle', CheckConfig> = {
     key: 'lifestyle',
     title: 'Lifestyle Cooked Check',
     subtitle: 'Start with a quick screening of your routine, then answer a more precise set of questions about how you actually live.',
-    accentClass: 'from-orange-100 via-amber-50 to-transparent',
+    accentClass: 'from-orange-100 via-amber-50 to-[#f3ede4]',
     introLabel: 'Lifestyle screening',
     profileQuestions: [
       {

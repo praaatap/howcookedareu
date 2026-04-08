@@ -205,24 +205,25 @@ function CheckPage() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#f6efe7]">
-      <div className={`pointer-events-none absolute inset-0 bg-linear-to-br ${config.accentClass} opacity-80`} />
+    <main className="check-scroll-area relative h-screen overflow-y-scroll overflow-x-hidden bg-linear-to-b from-[#e7f4f2] via-[#eef2ee] to-[#f3ede4]">
+      <div className={`pointer-events-none absolute inset-0 bg-linear-to-b ${config.accentClass} opacity-65`} />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-size-[34px_34px] opacity-[0.08]" />
 
       <div className="relative px-4 pb-20 pt-6 sm:px-6 sm:pt-10 lg:px-8">
         <header className="mx-auto max-w-6xl">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+            <Link
+              to="/"
+              aria-label="Go back to home page"
+              className="inline-flex min-h-11 items-center justify-center self-start rounded-full border border-slate-300 bg-white px-5 py-3 font-ui text-sm font-semibold text-slate-900 shadow-sm transition hover:border-slate-500"
+            >
+              Back Home
+            </Link>
             <div className="max-w-3xl">
               <p className="font-ui text-xs uppercase tracking-[0.22em] text-slate-600">Assessment</p>
               <h1 className="mt-2 text-balance font-display text-4xl text-slate-900 sm:text-5xl lg:text-6xl">{config.title}</h1>
               <p className="mt-3 font-ui text-sm leading-6 text-slate-700 sm:text-base">{config.subtitle}</p>
             </div>
-            <Link
-              to="/"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/80 px-5 py-3 font-ui text-sm font-semibold text-slate-700 transition hover:border-slate-500 sm:self-start"
-            >
-              Back Home
-            </Link>
           </div>
         </header>
 
