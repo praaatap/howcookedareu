@@ -78,7 +78,7 @@ function AiPulseWidget() {
 
 export default function LandingPage() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#f6efe7] px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+    <main className="relative h-screen overflow-hidden bg-[#f6efe7] px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
       <div className="pointer-events-none absolute -left-20 -top-16 h-72 w-72 rounded-full bg-[#fcd9b7]/55 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-[#d8ecef]/65 blur-3xl" />
 
@@ -86,7 +86,7 @@ export default function LandingPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.45 }}
-        className="relative mx-auto flex min-h-[calc(100vh-3rem)] w-full max-w-5xl flex-col items-center justify-center text-center"
+        className="relative mx-auto flex h-full w-full max-w-5xl flex-col items-center justify-center text-center"
       >
         <div className="inline-flex items-center gap-2 rounded-full border border-[#eadbca] bg-white/80 px-4 py-2">
           <MindLogo />
